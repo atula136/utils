@@ -46,6 +46,7 @@ desc "Create ipa"
   desc "Take screenshots"
   lane :screenshot do
     snapshot
+    frameit(white: true)
   end
 
   desc "Provision, take screenshots, build and upload to App Store"
@@ -57,4 +58,9 @@ desc "Create ipa"
 increment_build_number:
 Set Versioning System to Apple Generic.
 By default, Xcode does not use any versioning system. Setting Versioning System to Apple Generic ensures that Xcode will include all agvtool-generated version information in your project.
+--------
+
+> fastlane frameit
+--------
+brew install libpng jpeg imagemagick
 --------
